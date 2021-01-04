@@ -1,14 +1,26 @@
 package dogdoor;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class DogDoor {
 
 	private boolean open;
+	private List<Bark> allowedBark;
 	
 	public DogDoor() {
 		this.open = false;
+		this.allowedBark = new ArrayList<Bark>();
+	}
+	
+	public void setAllowedBark(Bark bark) {
+		this.allowedBark.add(bark);
+	}
+	
+	public List<Bark> getAllowedBark() {
+		return this.allowedBark;
 	}
 	
 	public void open() {
