@@ -1,4 +1,4 @@
-package guitarshop;
+package hello.ooad.guitarshop;
 
 public enum Builder {
 	FENDER, MARTIN, GIBSON, COLLINGS, OLSON, RYAN, PRS, ANY;

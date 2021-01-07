@@ -1,4 +1,4 @@
-package guitarshop;
+package hello.ooad.guitarshop;
 
 public enum Style {
   A, F;

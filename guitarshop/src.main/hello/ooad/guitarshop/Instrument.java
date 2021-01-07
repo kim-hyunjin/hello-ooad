@@ -1,4 +1,4 @@
-package guitarshop;
+package hello.ooad.guitarshop;
 
 public class Instrument {
   private String serialNumber;

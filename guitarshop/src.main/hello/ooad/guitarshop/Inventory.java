@@ -1,4 +1,4 @@
-package guitarshop;
+package hello.ooad.guitarshop;
 
 import java.util.LinkedList;
 import java.util.List;

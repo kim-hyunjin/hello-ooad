@@ -1,4 +1,4 @@
-package guitarshop;
+package hello.ooad.guitarshop;
 
 public enum InstrumentType {
   GUITAR, BANJO, DOBRO, FIDDLE, BASS, MANDOLIN;

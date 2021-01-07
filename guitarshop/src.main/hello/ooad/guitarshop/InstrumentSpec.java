@@ -1,4 +1,4 @@
-package guitarshop;
+package hello.ooad.guitarshop;
 
 import java.util.HashMap;
 import java.util.Map;

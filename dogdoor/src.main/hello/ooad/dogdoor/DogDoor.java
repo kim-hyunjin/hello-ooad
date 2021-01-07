@@ -1,4 +1,4 @@
-package dogdoor;
+package hello.ooad.dogdoor;
 
 import java.util.ArrayList;
 import java.util.List;

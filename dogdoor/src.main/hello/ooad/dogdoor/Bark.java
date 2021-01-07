@@ -1,4 +1,4 @@
-package dogdoor;
+package hello.ooad.dogdoor;
 
 public class Bark {
 	
