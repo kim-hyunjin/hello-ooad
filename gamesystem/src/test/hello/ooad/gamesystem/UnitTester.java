@@ -15,11 +15,15 @@ public class UnitTester {
     public void testUnitSpecificProperty(Unit unit, String propertyName, Object inputValue, Object expectedOutputValue) {
         System.out.println("\nTesting setting/getting a unit-specific property.");
         unit.setProperty(propertyName, inputValue);
-        Object outputValue = unit.getProperty(propertyName);
-        if (expectedOutputValue.equals(outputValue)) {
-            System.out.println("Test passed");
-        } else {
-            System.out.println("Test failed: " + outputValue + " didn't match " + expectedOutputValue);
+        try {
+            Object outputValue = unit.getProperty(propertyName);
+            if (expectedOutputValue.equals(outputValue)) {
+                System.out.println("Test passed");
+            } else {
+                System.out.println("Test failed: " + outputValue + " didn't match " + expectedOutputValue);
+            }
+        } catch (RuntimeException e) {
+            System.out.println("Test failed: " + e.getMessage());
         }
     }
 
@@ -36,12 +40,15 @@ public class UnitTester {
 
     public void testNonExistentProperty(Unit unit, String propertyName) {
         System.out.println("\nTesting getting a non-existent property's value.");
-        Object outputValue = unit.getProperty(propertyName);
-        if (outputValue == null) {
+        try {
+            Object outputValue = unit.getProperty(propertyName);
+        } catch (RuntimeException e) {
             System.out.println("Test passed");
-        } else {
-            System.out.println("Test failed with value of " + outputValue);
+            return;
         }
+        System.out.println("Test failed");
+
+
     }
 
     public static void main(String args[]) {

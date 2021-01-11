@@ -25,6 +25,18 @@ public class Unit {
         this.type = type;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Map getProperties() {
         return properties;
     }
@@ -53,8 +65,13 @@ public class Unit {
 
     public Object getProperty(String property) {
         if (properties == null) {
-            return null;
+            throw new RuntimeException("No properties for this Unit.");
         }
-        return properties.get(property);
+        Object value = properties.get(property);
+        if (value == null) {
+            throw new RuntimeException("Request for non-existent property.");
+        } else {
+            return value;
+        }
     }
 }
