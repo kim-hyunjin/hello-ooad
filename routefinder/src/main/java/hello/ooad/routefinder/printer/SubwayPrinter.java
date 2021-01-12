@@ -30,6 +30,6 @@ public class SubwayPrinter {
                 previousLine = currentLine;
             }
         }
-        out.println("Get off at " + connection.getStation2().getName() + "and enjoy yourself!");
+        out.println("Get off at " + connection.getStation2().getName() + " and enjoy yourself!");
     }
 }
