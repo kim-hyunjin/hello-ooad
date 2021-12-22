@@ -1,4 +1,4 @@
-# Studying with 'Head First Object-Oriented Analysis & Design'
+# Object-Oriented Analysis & Design
 
 ## 좋은 디자인 = 유연한 소프트웨어
 ### 인터페이스
